@@ -1,0 +1,72 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.18.0/matter.min.js"></script>
+		<title>Document</title>
+		<style>
+			body {
+				margin: 0;
+			}
+
+			.hidden {
+				display: none !important;
+			}
+
+			h1 {
+				color: white;
+				font-size: 64px;
+			}
+
+			.winner {
+				display: flex;
+				justify-content: top;
+				align-items: center;
+				position: absolute;
+				z-index: 1;
+				height: 100vh;
+				width: 100vw;
+				flex-direction: column;
+			}
+			.restart {
+				color: white;
+				font-size: 35px;
+				margin-top: 4rem;
+			}
+
+			label {
+				color: white;
+			}
+
+			.vert-cells,
+			.hor-cells {
+				margin-top: 2rem;
+				display: flex;
+				flex-direction: column;
+				margin-bottom: 2rem;
+			}
+			.disabled-for-now {
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="winner hidden">
+			<h1>You Won!</h1>
+
+			<section class="disabled-for-now">
+				<div class="vert-cells">
+					<label for="">Vertical Cells (Default: 4)</label>
+					<input type="number" class="vert-input" required />
+				</div>
+				<div class="hor-cells">
+					<label for="">Horizontal Cells (Default: 4)</label>
+					<input type="number" class="horiz-input" required />
+				</div>
+			</section>
+			<a href="#" class="restart">Play Again</a>
+		</div>
+		<script src="index.js"></script>
+	</body>
+</html>
